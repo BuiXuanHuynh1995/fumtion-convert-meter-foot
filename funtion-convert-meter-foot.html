@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+From Convert
+<input oninput="resultConvert()" id="input">
+<select id="unit1">
+    <option value="3.279">m</option>
+    <option value="0.305">f</option>
+</select>
+To Convert
+<input disabled id="output">
+<select id="unit2">
+    <option value="3.279">m</option>
+    <option value="0.305">f</option>
+</select>
+<script>
+    function resultConvert() {
+        let inputUnit = document.getElementById("input").value;
+        let unit1= document.getElementById("unit1").value;
+        let unit2= document.getElementById("unit2").value;
+        convert = (inputUnit*unit1)/unit2;
+        document.getElementById("output").value=convert;
+    }
+</script>
+</body>
+</html>
